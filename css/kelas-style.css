@@ -1,0 +1,416 @@
+/* =======================================================
+   1. CORE & RESET (Pencegah White Space)
+   ======================================================= */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+:root {
+    --primary-teal: #6BCFA8;
+    --hero-blue: #42E3F5; /* Warna Cyan Hero */
+    --footer-blue: #0A58CA; /* Warna Biru Footer Beranda */
+    --dark-teal: #004D40;
+    --deep-black-teal: #002D26;
+    --glass-white: rgba(255, 255, 255, 0.25);
+    --border-white: rgba(255, 255, 255, 0.4);
+}
+
+/* =======================================================
+   2. HEADER (Identik Beranda)
+   ======================================================= */
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 60px;     
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    z-index: 1000;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1; 
+}
+
+.header-logo img {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    margin-left: -130px;
+}
+
+.nav-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.navbar-pill {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--glass-white);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-white);
+    padding: 4px 12px;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.nav-item.active {
+    background: white;
+    color: var(--primary-teal);
+    font-weight: 700;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-item:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.header-right {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 15px; 
+}
+
+.btn-glass-icon {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 16px; transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-glass-icon:hover { background: white; color: var(--primary-teal); transform: rotate(10deg); }
+
+.btn-login-text { 
+    color: white; 
+    font-weight: 600; 
+    font-size: 14px; 
+    transition: 0.3s; 
+    text-decoration: none;
+}
+
+/* =======================================================
+   3. HERO BANNER
+   ======================================================= */
+.hero-banner {
+    background: linear-gradient(180deg, #42E3F5 0%, #E3FDFD 60%, #FFFFFF 100%);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: var(--dark-teal);
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.hero-text h1 span {
+    font-size: 65px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: var(--dark-teal);
+    opacity: 0.8;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+}
+
+/* =======================================================
+   4. LAYOUT UMUM KELAS (GITAR & PIANO)
+   ======================================================= */
+.class-section {
+    padding: 100px 10%;
+    position: relative;
+}
+
+.section-heading {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+.layout-side-by-side {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 50px;
+}
+
+/* Membalik posisi gambar & teks (Zig-zag) */
+.layout-side-by-side.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.visual-area { flex: 1; }
+.img-rounded {
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.text-area { flex: 1; }
+.text-area p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Audio Player */
+.audio-label {
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.audio-player-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 25px;
+    border-radius: 50px;
+}
+
+.play-icon {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.progress-track {
+    flex: 1;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* =======================================================
+   5. SKEMA WARNA KELAS
+   ======================================================= */
+
+/* --- TEMA PUTIH (GITAR) --- */
+.section-white { 
+    background-color: #ffffff; 
+}
+.section-white .section-heading { color: var(--dark-teal); }
+.section-white .audio-player-bar { background: #f4f4f4; }
+.section-white .play-icon { color: var(--dark-teal); }
+.section-white .progress-track { background: #e0e0e0; }
+.section-white .progress-fill { background: var(--primary-teal); }
+
+/* --- TEMA GRADIENT (PIANO) --- */
+.section-gradient-teal {
+    background: linear-gradient(135deg, #004D40 0%, #00796B 100%) !important;
+}
+.section-gradient-teal .section-heading,
+.section-gradient-teal .text-area p,
+.section-gradient-teal .audio-label,
+.section-gradient-teal .handwriting-font {
+    color: #ffffff !important;
+}
+.section-gradient-teal .audio-player-bar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.section-gradient-teal .play-icon { color: white; }
+.section-gradient-teal .progress-track { background: rgba(255, 255, 255, 0.2); }
+.section-gradient-teal .progress-fill { background: var(--hero-blue); }
+
+/* =======================================================
+   6. PRICE BAR & TEACHERS
+   ======================================================= */
+.price-bar {
+    padding: 30px 50px;
+    border-radius: 25px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+/* Warna Bar Harga Gitar */
+.section-white .price-bar { 
+    background: var(--border-white); 
+    color: var(--dark-teal);
+}
+
+/* Warna Bar Harga Piano */
+.section-gradient-teal .price-bar {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+.section-gradient-teal .price-bar h3 { color: var(--border-white); }
+
+.price-bar h3 { font-size: 30px; font-weight: 800; }
+
+.teacher-area { text-align: center; margin-top: 80px; }
+
+.handwriting-font {
+    font-family: "swanky and-moo-moo", cursive;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.teacher-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.teacher-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.teacher-card img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover !important;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.teacher-card img:hover { transform: scale(1.05); }
+
+/* Nama Guru */
+.section-white .teacher-card span { color: var(--dark-teal); font-weight: 700; }
+
+.section-gradient-teal .teacher-card span {
+    background: #ffffff;
+    color: var(--dark-teal);
+    padding: 5px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.btn-pink-solid {
+    display: inline-block;
+    background: #FF6B81;
+    color: white;
+    padding: 18px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-pink-solid:hover { transform: scale(1.05); background: #ff526a; }
+
+/* =========================================
+   7. FOOTER 
+   ========================================= */
+footer { 
+    background: var(--footer-blue); 
+    color: white; 
+    padding-top: 50px; 
+}
+
+.footer-container {
+    display: flex; justify-content: space-between;
+    max-width: 1100px; margin: 0 auto;
+    padding-bottom: 40px; padding-left: 20px; padding-right: 20px;
+}
+
+.footer-logo img {
+    width: auto; height: 150px;
+    object-fit: contain;
+    margin-left: -100px;
+    margin-bottom: -80px;
+    margin-top: -55px;
+}
+
+.tagline { 
+    margin-top: 0px; font-size: 12px; opacity: 0.8; 
+    margin-bottom: 20px; letter-spacing: 1px; 
+}
+
+.footer-right { flex: 1; text-align: right; }
+.footer-right p { 
+    margin-bottom: 10px; font-size: 14px; 
+    display: flex; align-items: center; justify-content: flex-end; gap: 10px; 
+}
+
+.copyright { 
+    background: black; text-align: center; 
+    padding: 20px; font-size: 12px; font-family: monospace; 
+}
+
+/* =======================================================
+   8. RESPONSIF HP
+   ======================================================= */
+@media (max-width: 768px) {
+    .main-header { position: relative; background: var(--primary-teal); padding: 20px; }
+    .nav-wrapper { position: static; transform: none; margin-top: 20px; }
+    .layout-side-by-side { flex-direction: column; }
+    .footer-container { flex-direction: column; text-align: center; }
+    .footer-logo img { margin-left: 0; }
+    .footer-right { text-align: center; }
+    .footer-right p { justify-content: center; }
+}
