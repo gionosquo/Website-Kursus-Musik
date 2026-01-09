@@ -18,7 +18,7 @@ a { text-decoration: none; color: inherit; }
 
 
 /* =========================================
-   BAGIAN HEADER (100% SIMETRIS)
+   2. BAGIAN HEADER 
    ========================================= */
 
 .main-header {
@@ -98,15 +98,14 @@ a { text-decoration: none; color: inherit; }
 
 /* 3. BAGIAN TOMBOL (KANAN) */
 .header-right {
-    flex: 1; /* Mengambil sisa ruang kanan */
+    flex: 1; 
     display: flex;
-    justify-content: flex-end; /* Mentok Kanan */
+    justify-content: flex-end;
     align-items: center;
     gap: 15px; 
     z-index: 20;
 }
 
-/* --- Style Tombol Kanan Tetap Sama --- */
 .btn-glass-icon {
     width: 40px; height: 40px;
     border-radius: 50%;
@@ -125,7 +124,7 @@ a { text-decoration: none; color: inherit; }
     color: white;
     font-size: 14px;
     font-weight: 500;
-    padding: 5px 20px; /* Padding sedikit dibesarkan agar enak dilihat */
+    padding: 5px 20px; 
     border-radius: 30px;
     transition: 0.3s;
 }
@@ -141,9 +140,9 @@ a { text-decoration: none; color: inherit; }
 
 /* Bagian Kanan (Search & Masuk) */
 .header-right {
-    flex: 1; /* Mengambil sisa ruang kanan */
+    flex: 1; 
     display: flex;
-    justify-content: flex-end; /* Dorong ke paling kanan */
+    justify-content: flex-end; 
     align-items: center;
     gap: 15px; 
 }
@@ -198,7 +197,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .big-logo-img {
-    width: 500px; /* Disesuaikan sedikit agar tidak terlalu penuh di layar laptop */
+    width: 500px; 
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
 }
 
@@ -327,7 +326,7 @@ a { text-decoration: none; color: inherit; }
 
 
 /* =========================================
-   6. FOOTER (REVISI LOGO BESAR)
+   6. FOOTER 
    ========================================= */
 footer { background: var(--footer-blue); color: white; padding-top: 50px; }
 .footer-container {
@@ -338,7 +337,7 @@ footer { background: var(--footer-blue); color: white; padding-top: 50px; }
 }
 .footer-left { flex: 1; }
 
-/* REVISI FOOTER LOGO: Membuat gambar besar */
+/* FOOTER LOGO */
 .footer-logo { 
     display: block;
     margin-bottom: 0px;
