@@ -1,5 +1,5 @@
 /* =======================================================
-   1. CORE & RESET (Pencegah White Space)
+   1. CORE & RESET 
    ======================================================= */
 html, body {
     width: 100%;
@@ -17,8 +17,8 @@ html, body {
 
 :root {
     --primary-teal: #6BCFA8;
-    --hero-blue: #42E3F5; /* Warna Cyan Hero */
-    --footer-blue: #0A58CA; /* Warna Biru Footer Beranda */
+    --hero-blue: #42E3F5; 
+    --footer-blue: #0A58CA; 
     --dark-teal: #004D40;
     --deep-black-teal: #002D26;
     --glass-white: rgba(255, 255, 255, 0.25);
