@@ -411,74 +411,69 @@ footer {
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+  display: flex; justify-content: space-between;
+  max-width: 1100px; 
+  margin: 0 auto;
+  padding-bottom: 40px; padding-left: 20px; padding-right: 20px;
 }
 
-.footer-left {
-    flex: 1;
-}
+.footer-left { flex: 1; }
 
-.footer-logo {
-    display: block;
-    margin-bottom: 0px;
+.footer-logo { 
+  display: block;
+  margin-bottom: 0px;
 }
 
 .footer-logo img {
-    width: auto;
-    object-fit: contain;
-    margin-left: -100px;
-    margin-bottom: -80px;
-    margin-top: -55px;
+  width: auto;
+  object-fit: contain;
+  margin-left: -100px;
+  margin-bottom: -80px;
+  margin-top: -55px;
 }
 
-.tagline {
-    margin-top: 0px;
-    font-size: 12px;
-    opacity: 0.8;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+.tagline { 
+  margin-top: 0px;
+  font-size: 12px; 
+  opacity: 0.8; 
+  margin-bottom: 20px; 
+  letter-spacing: 1px; 
 }
 
-.socials a {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.socials a { 
+  display: block; 
+  margin-bottom: 8px; 
+  font-size: 14px; 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
 }
 
-.footer-right {
-    flex: 1;
-    text-align: right;
+.footer-right { 
+  flex: 1; 
+  text-align: right; 
 }
 
-.footer-right h3 {
-    font-size: 18px;
-    margin-bottom: 20px;
+.footer-right h3 { 
+  font-size: 18px; 
+  margin-bottom: 20px; 
 }
 
-.footer-right p {
-    margin-bottom: 10px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
+.footer-right p { 
+  margin-bottom: 10px; 
+  font-size: 14px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-end; 
+  gap: 10px; 
 }
 
-.copyright {
-    background: black;
-    text-align: center;
-    padding: 20px;
-    font-size: 12px;
-    font-family: monospace;
+.copyright { 
+  background: black; 
+  text-align: center; 
+  padding: 20px; 
+  font-size: 12px; 
+  font-family: monospace; 
 }
 
 /* --- RESPONSIVE MOBILE --- */
