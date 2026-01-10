@@ -1,0 +1,279 @@
+/* --- VARIABLES & RESET --- */
+:root {
+    --bg-gradient-yellow: linear-gradient(180deg, #F9E79F 0%, #FEF9E7 35%, #FFFFFF 100%);
+    --primary-yellow: #F4D03F; 
+    --dark-yellow: #D4AC0D;
+    --text-dark: #333333;
+    --footer-blue: #0A58CA;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { 
+    background: var(--bg-gradient-yellow); 
+    min-height: 100vh; 
+    color: var(--text-dark); 
+    overflow-x: hidden; 
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* --- HEADER & NAVIGATION --- */
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 60px;     
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    z-index: 1000;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    z-index: 20;
+}
+
+.header-logo img {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    margin-left: -130px; 
+}
+
+.navbar-wrapper {
+    position: absolute;
+    top: 70px;
+    left: 0; 
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.navbar-pill {
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.nav-item {
+    color: var(--white);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-item.active {
+    background: var(--white);
+    color: var(--dark-yellow);
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    z-index: 20;
+}
+
+.btn-glass-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.btn-login-text {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* --- REGISTER SECTION --- */
+.register-section {
+    min-height: 100vh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    padding-top: 240px; 
+    padding-bottom: 120px;
+}
+
+.container-split {
+    display: flex; 
+    width: 100%; 
+    max-width: 1200px; 
+    padding: 0 20px; 
+    gap: 80px; 
+    align-items: flex-start;
+}
+
+.text-side { flex: 1; padding-top: 20px; }
+
+.text-side h1 {
+    font-size: 52px; 
+    color: var(--text-dark); 
+    line-height: 1.1; 
+    margin-bottom: 25px; 
+    font-weight: 800;
+}
+
+.text-side h1 span { color: var(--dark-yellow); }
+
+.subtitle { 
+    font-size: 17px; 
+    color: #555; 
+    margin-bottom: 45px; 
+    line-height: 1.7; 
+}
+
+.benefit-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 22px; 
+    margin-bottom: 45px; 
+}
+
+.benefit-item { display: flex; align-items: center; gap: 18px; }
+
+.icon-box {
+    width: 45px; height: 45px; background: var(--white); border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--dark-yellow); box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    font-size: 18px;
+}
+
+.benefit-item p { font-weight: 600; font-size: 16px; color: #333; }
+
+.contact-preview { border-top: 2px solid rgba(0,0,0,0.05); padding-top: 25px; }
+
+.wa-link { 
+    font-size: 20px; font-weight: 700; color: #27AE60; 
+    display: flex; align-items: center; gap: 10px; 
+}
+
+.form-side { flex: 1; }
+
+.form-card {
+    background: var(--white); 
+    padding: 45px; 
+    border-radius: 40px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+}
+
+.form-card h2 { 
+    text-align: center; margin-bottom: 35px; 
+    font-size: 26px; color: var(--text-dark); font-weight: 700; 
+}
+
+.input-group { margin-bottom: 22px; }
+
+.input-group label { 
+    display: block; font-size: 14px; font-weight: 600; 
+    margin-bottom: 10px; color: #444; 
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%; padding: 14px 18px; border-radius: 15px;
+    border: 1px solid #eee; background: #FDFDFD; font-size: 14px;
+    transition: 0.3s; outline: none;
+}
+
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 0 4px rgba(244, 208, 63, 0.15);
+}
+
+.row-group { display: flex; gap: 20px; }
+.full-width { flex: 1; }
+
+.btn-submit {
+    width: 100%; padding: 16px; background: var(--primary-yellow); 
+    color: #444; border: none; border-radius: 50px; font-weight: 700; 
+    font-size: 16px; cursor: pointer; transition: 0.3s; margin-top: 15px;
+}
+
+.btn-submit:hover { 
+    background: var(--dark-yellow); color: var(--white);
+    transform: translateY(-3px); box-shadow: 0 12px 25px rgba(212, 172, 13, 0.3); 
+}
+
+/* --- FOOTER --- */
+footer { 
+    background: var(--footer-blue); 
+    color: var(--white); 
+    padding-top: 50px; 
+}
+
+.footer-container { 
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding-bottom: 40px; 
+    padding: 0 20px; 
+}
+
+.footer-logo img { 
+    height: 150px; width: auto; object-fit: contain; 
+    margin-left: -100px; margin-bottom: -80px; margin-top: -55px; 
+}
+
+.footer-right { text-align: right; }
+
+.footer-right p { 
+    display: flex; justify-content: flex-end; 
+    gap: 10px; margin-bottom: 10px; font-size: 14px; 
+}
+
+.copyright { 
+    background: black; text-align: center; padding: 20px; font-size: 12px; 
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .main-header { padding: 20px; }
+    .header-logo img { margin-left: 0; height: 100px; }
+    .navbar-wrapper { top: 120px; }
+    .register-section { padding-top: 200px; }
+    .container-split { flex-direction: column; gap: 40px; }
+    .text-side { text-align: center; }
+    .benefit-item { justify-content: center; }
+    .footer-container { flex-direction: column; text-align: center; gap: 30px; }
+    .footer-logo img { margin-left: 0; }
+    .footer-right p { justify-content: center; }
+}

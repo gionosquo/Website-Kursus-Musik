@@ -1,6 +1,4 @@
-/* =======================================================
-   1. CORE & RESET (Pencegah White Space)
-   ======================================================= */
+/* --- CORE & RESET --- */
 html, body {
     width: 100%;
     overflow-x: hidden;
@@ -17,17 +15,15 @@ html, body {
 
 :root {
     --primary-teal: #6BCFA8;
-    --hero-blue: #42E3F5; /* Warna Cyan Hero */
-    --footer-blue: #0A58CA; /* Warna Biru Footer Beranda */
+    --hero-blue: #42E3F5; 
+    --footer-blue: #0A58CA; 
     --dark-teal: #004D40;
     --deep-black-teal: #002D26;
     --glass-white: rgba(255, 255, 255, 0.25);
     --border-white: rgba(255, 255, 255, 0.4);
 }
 
-/* =======================================================
-   2. HEADER (Identik Beranda)
-   ======================================================= */
+/* --- HEADER & NAVIGATION --- */
 .main-header {
     position: absolute;
     top: 0;
@@ -126,9 +122,7 @@ html, body {
     text-decoration: none;
 }
 
-/* =======================================================
-   3. HERO BANNER
-   ======================================================= */
+/* --- HERO BANNER --- */
 .hero-banner {
     background: linear-gradient(180deg, #42E3F5 0%, #E3FDFD 60%, #FFFFFF 100%);
     min-height: 100vh;
@@ -169,9 +163,7 @@ html, body {
     max-width: 800px;
 }
 
-/* =======================================================
-   4. LAYOUT UMUM KELAS (GITAR & PIANO)
-   ======================================================= */
+/* --- CLASS LAYOUT (GITAR & PIANO) --- */
 .class-section {
     padding: 100px 10%;
     position: relative;
@@ -190,12 +182,12 @@ html, body {
     margin-bottom: 50px;
 }
 
-/* Membalik posisi gambar & teks (Zig-zag) */
 .layout-side-by-side.flex-reverse {
     flex-direction: row-reverse;
 }
 
 .visual-area { flex: 1; }
+
 .img-rounded {
     width: 100%;
     border-radius: 40px;
@@ -203,13 +195,14 @@ html, body {
 }
 
 .text-area { flex: 1; }
+
 .text-area p {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 25px;
 }
 
-/* Audio Player */
+/* --- AUDIO PLAYER --- */
 .audio-label {
     font-weight: 700;
     font-size: 13px;
@@ -243,11 +236,7 @@ html, body {
     border-radius: 10px;
 }
 
-/* =======================================================
-   5. SKEMA WARNA KELAS
-   ======================================================= */
-
-/* --- TEMA PUTIH (GITAR) --- */
+/* --- COLOR THEMES --- */
 .section-white { 
     background-color: #ffffff; 
 }
@@ -257,7 +246,6 @@ html, body {
 .section-white .progress-track { background: #e0e0e0; }
 .section-white .progress-fill { background: var(--primary-teal); }
 
-/* --- TEMA GRADIENT (PIANO) --- */
 .section-gradient-teal {
     background: linear-gradient(135deg, #004D40 0%, #00796B 100%) !important;
 }
@@ -276,9 +264,7 @@ html, body {
 .section-gradient-teal .progress-track { background: rgba(255, 255, 255, 0.2); }
 .section-gradient-teal .progress-fill { background: var(--hero-blue); }
 
-/* =======================================================
-   6. PRICE BAR & TEACHERS
-   ======================================================= */
+/* --- PRICE BAR & TEACHERS --- */
 .price-bar {
     padding: 30px 50px;
     border-radius: 25px;
@@ -286,13 +272,11 @@ html, body {
     text-align: center;
 }
 
-/* Warna Bar Harga Gitar */
 .section-white .price-bar { 
     background: var(--border-white); 
     color: var(--dark-teal);
 }
 
-/* Warna Bar Harga Piano */
 .section-gradient-teal .price-bar {
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -338,7 +322,6 @@ html, body {
 
 .teacher-card img:hover { transform: scale(1.05); }
 
-/* Nama Guru */
 .section-white .teacher-card span { color: var(--dark-teal); font-weight: 700; }
 
 .section-gradient-teal .teacher-card span {
@@ -363,23 +346,25 @@ html, body {
 
 .btn-pink-solid:hover { transform: scale(1.05); background: #ff526a; }
 
-/* =========================================
-   7. FOOTER 
-   ========================================= */
-footer { 
-    background: var(--footer-blue); 
-    color: white; 
-    padding-top: 50px; 
-}
+/* --- FOOTER --- */
+footer { background: var(--footer-blue); color: white; padding-top: 50px; }
 
 .footer-container {
     display: flex; justify-content: space-between;
-    max-width: 1100px; margin: 0 auto;
+    max-width: 1100px; 
+    margin: 0 auto;
     padding-bottom: 40px; padding-left: 20px; padding-right: 20px;
 }
 
+.footer-left { flex: 1; }
+
+.footer-logo { 
+    display: block;
+    margin-bottom: 0px;
+}
+
 .footer-logo img {
-    width: auto; height: 150px;
+    width: auto;
     object-fit: contain;
     margin-left: -100px;
     margin-bottom: -80px;
@@ -387,24 +372,44 @@ footer {
 }
 
 .tagline { 
-    margin-top: 0px; font-size: 12px; opacity: 0.8; 
-    margin-bottom: 20px; letter-spacing: 1px; 
+    margin-top: 0px;
+    font-size: 12px; 
+    opacity: 0.8; 
+    margin-bottom: 20px; 
+    letter-spacing: 1px; 
+}
+
+.socials a { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-size: 14px; 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
 }
 
 .footer-right { flex: 1; text-align: right; }
+
+.footer-right h3 { font-size: 18px; margin-bottom: 20px; }
+
 .footer-right p { 
-    margin-bottom: 10px; font-size: 14px; 
-    display: flex; align-items: center; justify-content: flex-end; gap: 10px; 
+    margin-bottom: 10px; 
+    font-size: 14px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; 
+    gap: 10px; 
 }
 
 .copyright { 
-    background: black; text-align: center; 
-    padding: 20px; font-size: 12px; font-family: monospace; 
+    background: black; 
+    text-align: center; 
+    padding: 20px; 
+    font-size: 12px; 
+    font-family: monospace; 
 }
 
-/* =======================================================
-   8. RESPONSIF HP
-   ======================================================= */
+/* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
     .main-header { position: relative; background: var(--primary-teal); padding: 20px; }
     .nav-wrapper { position: static; transform: none; margin-top: 20px; }

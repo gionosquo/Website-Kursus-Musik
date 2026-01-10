@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Sekarang - Sol La Si Music</title>
+    
+    <link rel="stylesheet" href="css/daftar-style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-logo">
+            <img src="media/Logo-Samping.png" alt="Sollasi Logo" style="height: 150px; width: auto;">
+        </div>
+
+        <div class="navbar-wrapper">
+            <nav class="navbar-pill">
+                <a href="index.html" class="nav-item">Beranda</a>
+                <a href="kelas.html" class="nav-item">Kelas</a>
+                <a href="instruktur.html" class="nav-item">Instruktur</a>
+                <a href="daftar.html" class="nav-item active">Daftar</a>
+            </nav>
+        </div>
+
+        <div class="header-right">
+            <a href="login.html" class="btn-login-text">Masuk</a>
+        </div>
+    </header>
+
+    <section class="register-section" id="daftar">
+        <div class="container-split">
+            
+            <div class="text-side" data-aos="fade-right">
+                <h1>Wujudkan Mimpi<br><span>Musikmu!</span></h1>
+                <p class="subtitle">Isi formulir di samping untuk mengamankan slot kelasmu. Kuota terbatas setiap bulannya!</p>
+                
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <div class="icon-box"><i class="fa-solid fa-check"></i></div>
+                        <p>Gratis Biaya Pendaftaran</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon-box"><i class="fa-solid fa-music"></i></div>
+                        <p>Termasuk Peminjaman Alat</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="icon-box"><i class="fa-solid fa-certificate"></i></div>
+                        <p>Sertifikat Resmi</p>
+                    </div>
+                </div>
+
+                <div class="contact-preview">
+                    <p>Butuh bantuan? Chat Admin:</p>
+                    <a href="#" class="wa-link"><i class="fa-brands fa-whatsapp"></i> 0824-4432-11238</a>
+                </div>
+            </div>
+
+            <div class="form-side" data-aos="fade-left" data-aos-delay="200">
+                <div class="form-card">
+                    <h2>Formulir Pendaftaran</h2>
+                    <form action="#">
+                        <div class="input-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" placeholder="Contoh: Gion Pratama" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Nomor WhatsApp</label>
+                            <input type="number" placeholder="0812xxxx" required>
+                        </div>
+
+                        <div class="row-group">
+                            <div class="input-group">
+                                <label>Usia</label>
+                                <input type="number" placeholder="Thn" style="width: 80px;">
+                            </div>
+                            <div class="input-group full-width">
+                                <label>Pilih Kelas</label>
+                                <select>
+                                    <option value="piano">Piano Klasik</option>
+                                    <option value="gitar">Gitar Akustik/Elektrik</option>
+                                    <option value="drum">Drum</option>
+                                    <option value="vokal">Vokal</option>
+                                    <option value="saxophone">Saxophone</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Catatan Tambahan (Opsional)</label>
+                            <textarea rows="3" placeholder="Misal: Saya pemula, belum punya alat."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Kirim Pendaftaran <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="daftar">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="media/Logo-Atas-Bawah.png" style="height: 150px; width: auto; filter: brightness(100) invert(0);">
+                </div>
+                <p class="tagline">LEBIH DARI SEKEDAR NADA!</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-instagram"></i> Sollasi.id</a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i> SoL La Si Music</a>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h3>Hubungi Kami</h3>
+                <p><i class="fa-solid fa-house"></i> Jln. Pattimura No 8A, Denpasar Selatan, Denpasar, Bali</p>
+                <p><i class="fa-solid fa-phone"></i> 0824-4432-11238</p>
+                <p><i class="fa-regular fa-envelope"></i> Sollasimusicbali@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Sol La Si Music Course
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1200, once: false });
+    </script>
+</body>
+</html>

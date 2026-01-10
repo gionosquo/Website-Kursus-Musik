@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk - Sol La Si Music Course</title>
+    
+    <link rel="stylesheet" href="css/index-style.css">
+    <link rel="stylesheet" href="css/login-style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="media/Logo-Samping.png" alt="Sollasi Logo" style="height: 80px; width: auto;">
+            </a>
+        </div>
+    </header>
+
+    <main class="login-wrapper">
+        <div class="login-card">
+            
+            <div class="back-nav">
+                <a href="index.html" class="btn-back">
+                    <i class="fa-solid fa-arrow-left"></i> Kembali Ke Beranda
+                </a>
+            </div>
+
+            <div class="login-header">
+                <h2>Masuk Akun</h2>
+                <p>Gunakan User ID dan Password Anda</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-input">
+                    <label for="username">User ID</label>
+                    <input type="text" id="username" placeholder="Contoh: sollasi_user" required>
+                </div>
+
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Masukkan password" required>
+                </div>
+
+                <button type="submit" class="btn-primary-login">Masuk</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Belum punya akun? <a href="daftar.html">Daftar</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Ambil nama dari input User ID
+            const usernameVal = document.getElementById('username').value;
+            // Ambil kata pertama saja (misal: "Budi Santoso" jadi "Budi")
+            const nickname = usernameVal.split(' ')[0];
+
+            const btn = document.querySelector('.btn-primary-login');
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Menghubungkan...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                // SIMPAN KE LOCALSTORAGE (Fitur Utama)
+                localStorage.setItem('sollasi_user', nickname);
+                
+                alert('Berhasil Masuk! Selamat datang, ' + nickname);
+                window.location.href = 'index.html';
+            }, 1500);
+        });
+    </script>
+    
+</body>
+</html>

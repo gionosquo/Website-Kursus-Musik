@@ -5,35 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sol La Si Music Course</title>
     
-   <link rel="stylesheet" href="css/kelas-style.css">
-
+    <link rel="stylesheet" href="css/kelas-style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header class="main-header">
-        <div class="header-logo" data-aos="fade-down"data-aos-delay="200">
-            <img src="media/Logo-Samping.png" alt="Sollasi Logo" style="height: 150px; width: auto;">
+        <div class="header-logo" data-aos="fade-down" data-aos-delay="200">
+            <a href="index.html">
+                <img src="media/Logo-Samping.png" alt="Sollasi Logo" style="height: 150px; width: auto;">
+            </a>
         </div>
 
         <div class="navbar-wrapper" data-aos="fade-down" data-aos-delay="500">
             <nav class="navbar-pill">
-                <a href="#home" class="nav-item">Beranda</a>
-                <a href="#program" class="nav-item active">Kelas</a>
-                <a href="#instruktur" class="nav-item">Instruktur</a>
-                <a href="#daftar" class="nav-item">Daftar</a>
+                <a href="index.html" class="nav-item">Beranda</a>
+                <a href="kelas.html" class="nav-item active">Kelas</a>
+                <a href="instruktur.html" class="nav-item">Instruktur</a>
+                <a href="daftar.html" class="nav-item">Daftar</a>
             </nav>
         </div>
 
         <div class="header-right" data-aos="fade-down" data-aos-delay="800">
-            <a href="#" class="btn-glass-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <a href="#" class="btn-login-text">Masuk</a>
+            <a href="login.html" class="btn-login-text">Masuk</a>
         </div>
     </header>
 
@@ -42,38 +38,34 @@
             <h1>Lihat dan Kenali<br><span>Kelas Kami</span></h1>
             <p>Eksplorasi berbagai program kursus musik unggulan kami yang<br>dirancang khusus untuk mengembangkan bakatmu.</p>
         </div>
-
-     </section>
+    </section>
 
     <section class="class-section section-white">
         <h2 class="section-heading text-dark" data-aos="fade-up">Kelas Gitar</h2>
-
         <div class="layout-side-by-side">
             <div class="visual-area" data-aos="fade-right">
                 <img src="media/kelas/gambar-gitar.png.jpg" alt="Kelas Gitar" class="img-rounded">
             </div>
-
             <div class="text-area text-dark" data-aos="fade-left">
                 <p>Jelajahi keindahan musik melalui petikan jari (fingerstyle). Fokus pada teknik dasar yang benar, membaca not balok, dan pembentukan karakter suara nilon yang hangat.</p>
                 <p>Ekspresikan dirimu dengan aliran musik modern! Pelajari teknik strumming, improvisasi solo, hingga penggunaan efek gitar.</p>
-
                 <div class="audio-label">Dengarkan Instrumen</div>
                 <div class="audio-player-bar light-theme">
-                    <button class="play-icon"><i class="fa-solid fa-play"></i></button>
+                    <button class="play-icon" onclick="playInstrument('audioGitar', this)">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
                     <div class="progress-track">
-                        <div class="progress-fill" style="width: 45%"></div>
+                        <div id="progressGitar" class="progress-fill" style="width: 0%"></div>
                     </div>
+                    <audio id="audioGitar" src="media/audio/gitar.mp3"></audio>
                 </div>
             </div>
         </div>
-
         <div class="price-bar bar-cyan" data-aos="fade-up">
             <h3>Harga : Rp.650.000,00/bulan</h3>
-            <p>5x Pertemuan, Kelas 45 menit, Studio nyaman, Pengajar berpengalaman, Alat Musik disediakan.</p>
+            <p>5x Pertemuan, Kelas 45 menit, Studio nyaman, Alat Musik disediakan.</p>
         </div>
-
         <div class="teacher-area" data-aos="zoom-in">
-            <p class="handwriting-font text-dark">Belajarlah bersama guru berpengalaman kami</p>
             <div class="teacher-grid">
                 <div class="teacher-card">
                     <img src="media/kelas/mr-sam.png" alt="Mr Sam">
@@ -84,39 +76,36 @@
                     <span class="text-dark">Ms. Lauren</span>
                 </div>
             </div>
-            <a href="#daftar" class="btn-pink-solid">Daftar Sekarang</a>
+            <a href="daftar.html" class="btn-pink-solid">Daftar Sekarang</a>
         </div>
     </section>
 
     <section class="class-section section-gradient-teal">
         <h2 class="section-heading text-white" data-aos="fade-up">Kelas Piano Klasik</h2>
-
         <div class="layout-side-by-side">
             <div class="visual-area" data-aos="fade-right">
                 <img src="media/kelas/gambar-piano.jpg" alt="Kelas Piano" class="img-rounded">
             </div>
-
             <div class="text-area text-white" data-aos="fade-left">
                 <p>Membangun fondasi musik yang kokoh melalui koordinasi motorik tangan dan pemahaman teori musik mendalam bersama maestro dunia.</p>
                 <p>Pelajari teknik penempatan jari yang benar, dinamika nada (soft & loud), hingga interpretasi lagu-lagu klasik legendaris.</p>
-
                 <div class="audio-label">Dengarkan Instrumen</div>
                 <div class="audio-player-bar dark-theme">
-                    <button class="play-icon"><i class="fa-solid fa-play"></i></button>
+                    <button class="play-icon" onclick="playInstrument('audioPiano', this)">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
                     <div class="progress-track">
-                        <div class="progress-fill" style="width: 65%"></div>
+                        <div id="progressPiano" class="progress-fill" style="width: 0%"></div>
                     </div>
+                    <audio id="audioPiano" src="media/audio/piano.mp3"></audio>
                 </div>
             </div>
         </div>
-
         <div class="price-bar bar-grey" data-aos="fade-up">
             <h3>Harga : Rp.650.000,00/bulan</h3>
             <p>4x Pertemuan, Kelas 45 menit, Studio premium dengan Grand Piano.</p>
         </div>
-
         <div class="teacher-area" data-aos="zoom-in">
-            <p class="handwriting-font text-white">Guru Piano Klasik Kami</p>
             <div class="teacher-grid">
                 <div class="teacher-card">
                     <img src="media/kelas/ms-claren.png" alt="Ms Claren">
@@ -127,39 +116,36 @@
                     <div class="name-pill">Mr. Randy</div>
                 </div>
             </div>
-            <a href="#daftar" class="btn-pink-solid">Daftar Sekarang</a>
+            <a href="daftar.html" class="btn-pink-solid">Daftar Sekarang</a>
         </div>
     </section>
 
     <section class="class-section section-white">
         <h2 class="section-heading text-dark" data-aos="fade-up">Kelas Drum</h2>
-
         <div class="layout-side-by-side">
             <div class="visual-area" data-aos="fade-right">
                 <img src="media/kelas/gambar-drum.jpg" alt="Kelas Drum" class="img-rounded">
             </div>
-
             <div class="text-area text-dark" data-aos="fade-left">
                 <p>Salurkan energimu melalui ketukan ritme yang presisi! Fokus pada koordinasi tangan dan kaki, teknik rudiment dasar, hingga penguasaan berbagai genre seperti Rock, Pop, dan Jazz.</p>
                 <p>Pelajari cara membaca notasi drum dan kembangkan *fill-in* kreatifmu sendiri bersama instruktur profesional kami.</p>
-
                 <div class="audio-label">Dengarkan Instrumen</div>
                 <div class="audio-player-bar light-theme">
-                    <button class="play-icon"><i class="fa-solid fa-play"></i></button>
+                    <button class="play-icon" onclick="playInstrument('audioDrum', this)">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
                     <div class="progress-track">
-                        <div class="progress-fill" style="width: 80%"></div>
+                        <div id="progressDrum" class="progress-fill" style="width: 0%"></div>
                     </div>
+                    <audio id="audioDrum" src="media/audio/drum.mp3"></audio>
                 </div>
             </div>
         </div>
-
         <div class="price-bar bar-cyan" data-aos="fade-up">
             <h3>Harga : Rp.650.000,00/bulan</h3>
-            <p>4x Pertemuan, Kelas 45 menit, Studio kedap suara dengan drum set lengkap.</p>
+            <p>4x Pertemuan, Kelas 45 menit, Studio kedap suara.</p>
         </div>
-
         <div class="teacher-area" data-aos="zoom-in">
-            <p class="handwriting-font text-dark">Kuasai ritme bersama instruktur kami</p>
             <div class="teacher-grid">
                 <div class="teacher-card">
                     <img src="media/kelas/mr-varajh.png" alt="Mr Varajh">
@@ -170,78 +156,72 @@
                     <span class="text-dark">Mr. Jacob</span>
                 </div>
             </div>
-            <a href="#daftar" class="btn-pink-solid">Daftar Sekarang</a>
+            <a href="daftar.html" class="btn-pink-solid">Daftar Sekarang</a>
         </div>
     </section>
 
     <section class="class-section section-gradient-teal">
         <h2 class="section-heading text-white" data-aos="fade-up">Kelas Saxophone</h2>
-
         <div class="layout-side-by-side">
             <div class="visual-area" data-aos="fade-right">
                 <img src="media/kelas/gambar-saxophone.jpg" alt="Kelas Saxophone" class="img-rounded">
             </div>
-
             <div class="text-area text-white" data-aos="fade-left">
                 <p>Rasakan nuansa musik Jazz dan Blues melalui tiupan Saxophone yang merdu. Fokus pada teknik pernapasan perut (diapragma), penguasaan fingering, serta pembentukan karakter suara (tone) yang halus.</p>
                 <p>Pelajari teknik vibrato, altissimo, hingga cara melakukan improvisasi solo yang ekspresif bersama ahlinya.</p>
-
                 <div class="audio-label">Dengarkan Instrumen</div>
                 <div class="audio-player-bar dark-theme">
-                    <button class="play-icon"><i class="fa-solid fa-play"></i></button>
+                    <button class="play-icon" onclick="playInstrument('audioSax', this)">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
                     <div class="progress-track">
-                        <div class="progress-fill" style="width: 55%"></div>
+                        <div id="progressSax" class="progress-fill" style="width: 0%"></div>
                     </div>
+                    <audio id="audioSax" src="media/audio/saxophone.mp3"></audio>
                 </div>
             </div>
         </div>
-
         <div class="price-bar bar-grey" data-aos="fade-up">
             <h3>Harga : Rp.700.000,00/bulan</h3>
-            <p>4x Pertemuan, Kelas 45 menit, Ruangan kedap suara, Instrument tersedia untuk latihan.</p>
+            <p>4x Pertemuan, Ruangan kedap suara, Instrument tersedia.</p>
         </div>
-
         <div class="teacher-area" data-aos="zoom-in">
-            <p class="handwriting-font text-white">Mainkan melodi indah bersama instruktur kami</p>
             <div class="teacher-grid">
                 <div class="teacher-card">
                     <img src="media/kelas/mr-abraham.png" alt="Mr Abraham">
                     <div class="name-pill">Mr. Abraham</div>
                 </div>
             </div>
-            <a href="#daftar" class="btn-pink-solid">Daftar Sekarang</a>
+            <a href="daftar.html" class="btn-pink-solid">Daftar Sekarang</a>
         </div>
     </section>
 
     <section class="class-section section-white">
         <h2 class="section-heading text-dark" data-aos="fade-up">Kelas Vokal</h2>
-
         <div class="layout-side-by-side">
             <div class="visual-area" data-aos="fade-right">
                 <img src="media/kelas/gambar-vocal.jpg" alt="Kelas Vokal" class="img-rounded">
             </div>
-
             <div class="text-area text-dark" data-aos="fade-left">
                 <p>Temukan karakter suara unikmu! Di sini kamu akan mempelajari teknik pernapasan diapragma, penempatan resonansi yang benar, serta teknik vokal modern seperti riff & runs dan belting.</p>
                 <p>Bukan hanya sekedar bernyanyi, kami juga melatih artikulasi, ekspresi panggung (stage act), dan cara menjaga kesehatan pita suara agar tetap prima.</p>
-
                 <div class="audio-label">Dengarkan Hasil Latihan</div>
                 <div class="audio-player-bar light-theme">
-                    <button class="play-icon"><i class="fa-solid fa-play"></i></button>
+                    <button class="play-icon" onclick="playInstrument('audioVokal', this)">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
                     <div class="progress-track">
-                        <div class="progress-fill" style="width: 75%"></div>
+                        <div id="progressVokal" class="progress-fill" style="width: 0%"></div>
                     </div>
+                    <audio id="audioVokal" src="media/audio/vokal.mp3"></audio>
                 </div>
             </div>
         </div>
-
         <div class="price-bar bar-cyan" data-aos="fade-up">
             <h3>Harga : Rp.650.000,00/bulan</h3>
-            <p>4x Pertemuan, Kelas 45 menit, Studio Full AC & Sound System Berkualitas.</p>
+            <p>4x Pertemuan, Studio Full AC & Sound System Berkualitas.</p>
         </div>
-
         <div class="teacher-area" data-aos="zoom-in">
-            <p class="handwriting-font text-dark">Bernyanyi lebih indah bersama guru kami</p>
             <div class="teacher-grid">
                 <div class="teacher-card">
                     <img src="media/kelas/ms-rose.png" alt="Ms Rose">
@@ -252,15 +232,15 @@
                     <span class="text-dark">Ms. Samantha</span>
                 </div>
             </div>
-            <a href="#daftar" class="btn-pink-solid">Daftar Sekarang</a>
+            <a href="daftar.html" class="btn-pink-solid">Daftar Sekarang</a>
         </div>
     </section>
 
-    <footer>
+    <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-left">
                 <div class="footer-logo">
-                    <img src="media/Logo-Atas-Bawah.png" style="height: 200px; filter: brightness(100); width: auto;"> 
+                    <img src="media/Logo-Atas-Bawah.png" alt="Sollasi Footer Logo" style="height: 150px; filter: brightness(0) invert(1);"> 
                 </div>
                 <p class="tagline">LEBIH DARI SEKEDAR NADA!</p>
                 <div class="socials">
@@ -268,22 +248,22 @@
                     <a href="#"><i class="fa-brands fa-youtube"></i> SoL La Si Music</a>
                 </div>
             </div>
-
             <div class="footer-right">
                 <h3>Hubungi Kami</h3>
-                <p><i class="fa-solid fa-house"></i> Jln. Pattimura No 8A, Denpasar Selatan, Denpasar, Bali</p>
-                <p><i class="fa-solid fa-phone"></i> 0824-4432-11238</p>
-                <p><i class="fa-regular fa-envelope"></i> Sollasimusicbali@gmail.com</p>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-house"></i> Jln. Pattimura No 8A, Denpasar Selatan, Bali</li>
+                    <li><i class="fa-solid fa-phone"></i> 0824-4432-11238</li>
+                    <li><i class="fa-regular fa-envelope"></i> Sollasimusicbali@gmail.com</li>
+                </ul>
             </div>
         </div>
         <div class="copyright">
-            &copy; 2026 Sol La Si Music Course
+            <p>&copy; 2026 Sol La Si Music Course. All rights reserved.</p>
         </div>
     </footer>
 
-<script src="js/script.js"></script>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js?v=1.7"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
         duration: 1000, 
@@ -293,4 +273,3 @@
     </script>
 </body>
 </html>
-
