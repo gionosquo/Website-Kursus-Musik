@@ -25,13 +25,7 @@ a { text-decoration: none; color: inherit; }
     top: 40px;
     left: 0;
     width: 100%;
-    
-    /* PADDING HEADER:
-       - 10px (Atas/Bawah): Agar mepet ke atas tapi tidak sesak.
-       - 50px (Kiri/Kanan): Agar seimbang kiri kanan.
-    */
     padding: 10px 50px;     
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,13 +36,11 @@ a { text-decoration: none; color: inherit; }
 .header-logo {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Rata kiri */
-    flex: 1; /* Mengambil ruang kiri */
+    justify-content: flex-start; 
+    flex: 1; 
 }
 
 .header-logo img { 
-    /* UKURAN LOGO HEADER */
-    /* Kita set 50px agar proporsional dengan menu */
     height: 50px; 
     width: auto;
     object-fit: contain;
@@ -62,7 +54,7 @@ a { text-decoration: none; color: inherit; }
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 4px 10px; /* Sedikit lebih gepeng */
+    padding: 4px 10px; 
     border-radius: 50px;
 }
 
@@ -86,9 +78,9 @@ a { text-decoration: none; color: inherit; }
 
 /* --- BAGIAN KANAN (SEARCH & MASUK) --- */
 .header-right {
-    flex: 1; /* Mengambil sisa ruang kanan */
+    flex: 1; 
     display: flex;
-    justify-content: flex-end; /* Rata Kanan */
+    justify-content: flex-end; 
     align-items: center;
     gap: 15px; 
 }
@@ -117,7 +109,7 @@ a { text-decoration: none; color: inherit; }
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 80px; /* Kompensasi header */
+    padding-top: 80px; 
 }
 
 .hero-content {
@@ -133,12 +125,12 @@ a { text-decoration: none; color: inherit; }
 .hero-left {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* Logo besar mendekat ke teks */
+    justify-content: flex-end; 
     padding-right: 50px;
 }
 
 .big-logo-img {
-    width: 450px; /* Ukuran Logo Besar di tengah */
+    width: 450px; 
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
 }
 
@@ -196,7 +188,108 @@ a { text-decoration: none; color: inherit; }
 
 
 /* =========================================
-   5. ABOUT SECTION
+   5. JADWAL SECTION (BARU - TEMA KUNING SOFT)
+   ========================================= */
+.schedule-section {
+    background-color: #FEF9E7; 
+    padding: 80px 20px;
+}
+
+.schedule-subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 40px;
+    margin-top: -30px;
+}
+
+.schedule-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    overflow: hidden;
+    padding: 40px;
+    border: 1px solid #FFF59D; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+th {
+    background: #F4D03F; 
+    color: #333333;      
+    padding: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+th br { display: block; margin-bottom: 2px; }
+
+td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #FFF8E1; 
+    color: #555;
+    font-size: 15px;
+}
+
+.day-col {
+    font-weight: 700;
+    color: #F57F17;       
+    background: #FFF9C4;  
+    width: 25%;
+}
+
+.highlight-text {
+    color: #FF4081; 
+    font-weight: 700;
+    font-style: italic;
+}
+
+.circle-icon {
+    height: 25px;
+    width: 25px;
+    background-color: #FFF3E0; 
+    color: #FFB300;            
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.schedule-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    border-top: 2px dashed #FFF59D;
+    padding-top: 30px;
+}
+
+.info-box { text-align: center; }
+
+.info-box i {
+    font-size: 32px;
+    color: #FBC02D; 
+    margin-bottom: 10px;
+}
+
+.info-box h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.info-box p { font-size: 14px; color: #777; }
+
+
+/* =========================================
+   6. ABOUT SECTION
    ========================================= */
 .about { background: white; padding: 80px 20px; }
 .about-title {
@@ -247,7 +340,7 @@ a { text-decoration: none; color: inherit; }
 
 
 /* =========================================
-   6. FOOTER (LOGONYA BESAR!)
+   7. FOOTER
    ========================================= */
 footer { background: var(--footer-blue); color: white; padding-top: 50px; }
 .footer-container {
@@ -318,7 +411,7 @@ footer { background: var(--footer-blue); color: white; padding-top: 50px; }
 
 
 /* =========================================
-   7. RESPONSIF HP
+   8. RESPONSIF HP
    ========================================= */
 @media (max-width: 768px) {
     .main-header { flex-direction: column; gap: 20px; position: relative; background: #6BCFA8; padding: 20px; }
@@ -330,4 +423,33 @@ footer { background: var(--footer-blue); color: white; padding-top: 50px; }
     .hero-buttons { justify-content: center; }
     .footer-right { text-align: center; }
     .footer-right p { justify-content: center; }
+
+    /* Responsif Jadwal */
+    .schedule-wrapper { padding: 20px; }
+    
+    table, thead, tbody, th, td, tr { display: block; }
+    
+    thead tr { position: absolute; top: -9999px; left: -9999px; }
+    
+    tr { margin-bottom: 20px; border: 1px solid #FFE082; border-radius: 10px; overflow: hidden; }
+    
+    td { 
+        border: none;
+        border-bottom: 1px solid #FFF8E1; 
+        position: relative;
+        padding-left: 50%; 
+        text-align: right;
+    }
+    
+    td:before { 
+        position: absolute;
+        top: 15px; left: 15px; width: 45%; 
+        padding-right: 10px; white-space: nowrap;
+        text-align: left; font-weight: bold;
+        content: attr(data-label); 
+    }
+
+    .day-col { width: 100%; text-align: center; background: #F4D03F; color: #333; }
+    
+    .schedule-info { flex-direction: column; gap: 30px; }
 }
