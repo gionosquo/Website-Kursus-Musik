@@ -129,7 +129,7 @@ Pastikan Git dan Visual Studio Code sudah terinstall.
 Clone repositori ini ke komputer Anda:
 
 Bash
-git clone [https://github.com/gionosquo/Website-Kursus-Musik.git](https://github.com/gionosquo/Website-Kursus-Musik.git)
+git clone [https://gionosquo.github.io/Website-Kursus-Musik/] (https://gionosquo.github.io/Website-Kursus-Musik/)
 Buka folder proyek di VS Code.
 
 Install ekstensi Live Server (oleh Ritwick Dey) di VS Code.
