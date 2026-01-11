@@ -1,3 +1,5 @@
+/* --- LOGIN PAGE STYLES --- */
+
 /* Layout Utama */
 .login-wrapper {
     min-height: 100vh; 
@@ -76,6 +78,11 @@
     background: #fafafa;
 }
 
+.form-input input:focus {
+    border-color: #ffcc00;
+    background: #fff;
+}
+
 /* Button Submit */
 .btn-primary-login {
     width: 100%;
@@ -89,4 +96,48 @@
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-primary-login:hover {
+    background-color: #e6b800;
+    transform: translateY(-2px);
+}
+
+.btn-primary-login:active {
+    transform: scale(0.98);
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 480px) {
+    .login-wrapper {
+        padding: 15px; 
+        background-color: #ffffff; 
+    }
+
+    .login-card {
+        padding: 25px 20px; 
+        box-shadow: none; 
+        border: none; 
+        max-width: 100%;
+    }
+
+    .login-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .form-input input {
+        padding: 14px 15px; 
+        font-size: 16px; 
+    }
+
+    .btn-primary-login {
+        padding: 16px; 
+        font-size: 1.1rem;
+    }
+
+    .btn-back {
+        font-size: 0.95rem; 
+        padding: 10px 0; 
+    }
 }

@@ -264,7 +264,11 @@ footer {
     background: black; text-align: center; padding: 20px; font-size: 12px; 
 }
 
-/* --- RESPONSIVE --- */
+/* =========================================
+   RESPONSIVE FIX (TABLET & MOBILE)
+   ========================================= */
+
+/* Tablet (Layar Sedang) */
 @media (max-width: 992px) {
     .main-header { padding: 20px; }
     .header-logo img { margin-left: 0; height: 100px; }
@@ -276,4 +280,63 @@ footer {
     .footer-container { flex-direction: column; text-align: center; gap: 30px; }
     .footer-logo img { margin-left: 0; }
     .footer-right p { justify-content: center; }
+}
+
+/* HP / Mobile (Layar Kecil) - FIX LENGKAP */
+@media (max-width: 768px) {
+    
+    /* --- HEADER FIX (Tumpuk ke bawah) --- */
+    .main-header {
+        position: relative; /* Ganti dari absolute biar tidak menutupi form */
+        flex-direction: column;
+        gap: 15px;
+        background: linear-gradient(180deg, #F9E79F 0%, #FEF9E7 100%); /* Lanjutkan background */
+    }
+
+    .header-logo, .header-right { 
+        justify-content: center; 
+        width: 100%;
+    }
+
+    .header-logo img { height: 80px; } /* Perkecil logo */
+    
+    .navbar-wrapper {
+        position: static; /* Biar nempel normal di dokumen flow */
+        margin: 10px 0;
+        pointer-events: auto;
+    }
+
+    .navbar-pill {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap; /* Kalau menu kepanjangan, turun ke bawah */
+    }
+
+    /* --- FORM SECTION FIX --- */
+    .register-section {
+        padding-top: 30px; /* Kurangi padding karena header sudah relative */
+        padding-bottom: 60px;
+    }
+
+    .container-split { gap: 30px; }
+
+    .text-side h1 { font-size: 32px; } /* Kecilkan judul besar */
+    .subtitle { font-size: 14px; }
+
+    .form-card {
+        padding: 25px; /* Padding form lebih tipis di HP */
+        border-radius: 25px;
+    }
+
+    /* Input Email & HP jadi atas-bawah */
+    .row-group {
+        flex-direction: column; 
+        gap: 0;
+    }
+
+    .input-group label { font-size: 13px; }
+    
+    /* --- FOOTER FIX --- */
+    .footer-logo img { margin: 0 auto 20px auto; height: 100px; }
+    .footer-container { padding: 0 20px 40px 20px; }
 }

@@ -477,30 +477,143 @@ footer {
 }
 
 /* --- RESPONSIVE MOBILE --- */
+@media (max-width: 992px) {
+    .class-section {
+        padding: 60px 5%;
+    }
+    
+    .layout-side-by-side {
+        gap: 40px;
+    }
+
+    .hero-text h1 span {
+        font-size: 50px;
+    }
+}
+
 @media (max-width: 768px) {
+    /* --- Header & Nav Mobile --- */
     .main-header {
         position: relative;
-        background: var(--primary-teal);
+        background: var(--hero-blue);
         padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-logo {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .header-logo img {
+        margin-left: 0;
+        height: 100px;
     }
 
     .nav-wrapper {
         position: static;
         transform: none;
-        margin-top: 20px;
+        width: 100%;
     }
 
-    .layout-side-by-side {
-        flex-direction: column;
+    .navbar-pill {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        border-radius: 20px;
     }
 
+    .nav-item {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* --- Hero Section Mobile --- */
+    .hero-banner {
+        padding-top: 40px;
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text h1 span {
+        font-size: 40px;
+    }
+
+    /* --- Layout Kelas Mobile --- */
+    .section-heading {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .layout-side-by-side, 
+    .layout-side-by-side.flex-reverse {
+        flex-direction: column; /* Semua gambar jadi di atas teks */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .visual-area, .text-area {
+        width: 100%;
+    }
+
+    .img-rounded {
+        border-radius: 25px;
+    }
+
+    .audio-player-bar {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    /* --- Price & Teachers Mobile --- */
+    .price-bar {
+        padding: 20px;
+        margin: 30px 0;
+    }
+
+    .price-bar h3 {
+        font-size: 22px;
+    }
+
+    .teacher-grid {
+        gap: 20px;
+    }
+
+    .teacher-card {
+        width: 45%; 
+    }
+
+    .btn-pink-solid {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    /* --- Footer Mobile --- */
     .footer-container {
         flex-direction: column;
         text-align: center;
+        gap: 40px;
     }
 
     .footer-logo img {
         margin-left: 0;
+        margin-bottom: -40px;
+        margin-top: -20px;
+        height: 120px;
     }
 
     .footer-right {
@@ -509,5 +622,16 @@ footer {
 
     .footer-right p {
         justify-content: center;
+    }
+}
+
+/* Fix untuk layar sangat kecil (iPhone SE / Fold) */
+@media (max-width: 400px) {
+    .hero-text h1 span {
+        font-size: 32px;
+    }
+    
+    .teacher-card {
+        width: 100%; 
     }
 }

@@ -411,45 +411,103 @@ footer { background: var(--footer-blue); color: white; padding-top: 50px; }
 
 
 /* =========================================
-   8. RESPONSIF HP
+   8. RESPONSIF HP (DIPERBAIKI)
    ========================================= */
 @media (max-width: 768px) {
-    .main-header { flex-direction: column; gap: 20px; position: relative; background: #6BCFA8; padding: 20px; }
-    .hero { padding-top: 20px; }
-    .navbar-pill { width: 100%; justify-content: center; }
-    .hero-content, .about-content, .footer-container { flex-direction: column; text-align: center; }
-    .hero-left { justify-content: center; padding: 0; margin-bottom: 30px; }
-    .hero-right { padding: 0; }
-    .hero-buttons { justify-content: center; }
-    .footer-right { text-align: center; }
-    .footer-right p { justify-content: center; }
+    
+    /* --- HEADER: Ubah posisi biar gak nimpa & Stack ke bawah --- */
+    .main-header { 
+        position: relative; /* Ganti absolute jadi relative */
+        top: 0; 
+        padding: 20px; 
+        flex-direction: column; /* Menu turun ke bawah */
+        gap: 15px;
+        background: linear-gradient(180deg, #6BCFA8 0%, #B2F5EA 100%); /* Lanjutin warna background */
+    }
 
-    /* Responsif Jadwal */
-    .schedule-wrapper { padding: 20px; }
+    .header-logo, .navbar-wrapper, .header-right { 
+        justify-content: center; 
+        width: 100%; 
+    }
+
+    .header-logo img { height: 60px; } /* Logo header dikecilin */
+
+    .navbar-pill { 
+        width: 100%; 
+        justify-content: center; 
+        flex-wrap: wrap; /* Kalau layar sempit banget, menu turun */
+    }
+    
+    /* --- HERO: Gambar & Text Center --- */
+    .hero { padding-top: 20px; padding-bottom: 60px; min-height: auto; }
+    
+    .hero-content { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .hero-left { 
+        padding-right: 0; 
+        justify-content: center; 
+        margin-bottom: 30px; 
+    }
+
+    .big-logo-img { 
+        width: 70%; /* PENTING: Pake persen, jangan pixel mati (450px) */
+        max-width: 280px; 
+    }
+
+    .hero-right h1 { font-size: 32px; } /* Font judul agak kecilin */
+    .hero-buttons { justify-content: center; }
+
+    /* --- TABEL JADWAL: Ubah jadi Kartu --- */
+    .schedule-wrapper { padding: 15px; }
     
     table, thead, tbody, th, td, tr { display: block; }
     
     thead tr { position: absolute; top: -9999px; left: -9999px; }
     
-    tr { margin-bottom: 20px; border: 1px solid #FFE082; border-radius: 10px; overflow: hidden; }
+    tr { 
+        margin-bottom: 15px; 
+        border: 2px solid #FFF176; /* Border kuning */
+        border-radius: 15px; 
+        background: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        overflow: hidden;
+    }
     
     td { 
         border: none;
-        border-bottom: 1px solid #FFF8E1; 
+        border-bottom: 1px dashed #eee; 
         position: relative;
         padding-left: 50%; 
         text-align: right;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
     }
     
-    td:before { 
-        position: absolute;
-        top: 15px; left: 15px; width: 45%; 
-        padding-right: 10px; white-space: nowrap;
-        text-align: left; font-weight: bold;
-        content: attr(data-label); 
-    }
+    /* Label Manual (Sesi 1, 2, dst) */
+    td:nth-of-type(1) { background: #FFF9C4; font-weight: bold; justify-content: center; color: #F57F17; }
+    
+    td:nth-of-type(2):before { content: "Sesi 1 (15.00)"; font-weight: bold; font-size: 12px; color: #888; }
+    td:nth-of-type(3):before { content: "Sesi 2 (16.00)"; font-weight: bold; font-size: 12px; color: #888; }
+    td:nth-of-type(4):before { content: "Sesi 3 (17.00)"; font-weight: bold; font-size: 12px; color: #888; }
+    td:nth-of-type(5):before { content: "Sesi 4 (18.00)"; font-weight: bold; font-size: 12px; color: #888; }
 
-    .day-col { width: 100%; text-align: center; background: #F4D03F; color: #333; }
+    .schedule-info { flex-direction: column; gap: 20px; }
+
+    /* --- FOOTER & ABOUT --- */
+    .about-content { flex-direction: column; text-align: center; gap: 30px; }
+    .about-image img { width: 100%; max-width: 300px; }
     
-    .schedule-info { flex-direction: column; gap: 30px; }
+    .stats-container { flex-direction: column; align-items: center; gap: 30px; }
+
+    .footer-container { flex-direction: column; text-align: center; gap: 30px; }
+    .footer-left { align-items: center; display: flex; flex-direction: column; }
+    .footer-logo img { margin: 0 auto 20px auto; height: 100px; }
+    .socials { justify-content: center; }
+    .footer-right { text-align: center; }
+    .footer-right p { justify-content: center; }
 }
