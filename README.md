@@ -18,7 +18,7 @@ Proyek ini dikembangkan sebagai tugas akhir untuk mendemonstrasikan kemampuan *F
 | :--- | :--- | :--- | :--- |
 | [Gionosquo Marthzkiel] | [ISI_NIM] | [@gionosquo](https://github.com/gionosquo) | Project Manager, JS, UI Design (web prototype design) ,  HTML Structure (all pages), CSS Styling (all pages), Asset Managemen, |
 | [Arnoldus F. U. Borung] | [240040073] | [@arnoldborung](https://github.com/arnoldborung-rgb) | - |
-| [Nama Anggota 3] | [ISI_NIM] | [@username] | - |
+| [Nama Anggota 3] | [240040128] | [@atayakumara447]  | - |
 
 
 ---
