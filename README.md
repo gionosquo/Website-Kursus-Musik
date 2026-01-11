@@ -18,7 +18,7 @@ Proyek ini dikembangkan sebagai tugas akhir untuk mendemonstrasikan kemampuan *F
 | :--- | :--- | :--- | :--- |
 | [Gionosquo Marthzkiel] | [ISI_NIM] | [@gionosquo](https://github.com/gionosquo) | Project Manager, JS, UI Design (web prototype design) ,  HTML Structure (all pages), CSS Styling (all pages), Asset Managemen, |
 | [Arnoldus F. U. Borung] | [240040073] | [@arnoldborung](https://github.com/arnoldborung-rgb) | - |
-| [Nama Anggota 3] | [240040128] | [@atayakumara447] https://github.com/atayakumara447-source | - |
+| [I Gede Made Ataya Kumara Dharma Putra] | [240040128] | [@atayakumara447] https://github.com/atayakumara447-source | Developed a responsive Course Listing Page using HTML, CSS, and JavaScript for a music course website, featuring animated sections, custom audio player integration, and instructor profiles, Implemented a responsive Login Page UI using HTML and CSS, featuring a clean card-based layout and simple navigation for user authentication access. |
 
 
 ---
