@@ -59,8 +59,9 @@ Website ini dibangun menggunakan teknologi *native* untuk performa maksimal tanp
 
 ## 6. Struktur Folder
 
-Berikut adalah susunan direktori proyek berdasarkan kondisi repository saat ini:
+# Struktur Proyek Web Kursus Musik - Sollasi
 
+```text
 /Web Kursus Musik
 │
 ├── index.html               # Halaman utama website (Wajib ada)
@@ -109,7 +110,7 @@ Berikut adalah susunan direktori proyek berdasarkan kondisi repository saat ini:
 │   ├── Logo-Samping.png     # Logo untuk area header
 │   └── Sollasi-Logo-White.png # Logo putih untuk hero banner
 │
-└── /lib                   # Folder untuk library eksternal
+└── /lib                     # Folder untuk library eksternal
     └── (Kosong)
 ---
 ## 7. Cara Menjalankan Website
