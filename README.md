@@ -17,7 +17,7 @@ Proyek ini dikembangkan sebagai tugas akhir untuk mendemonstrasikan kemampuan *F
 | Nama Lengkap | NIM | Username GitHub | Peran / Tugas |
 | :--- | :--- | :--- | :--- |
 | **Gion** (Kamu) | [ISI_NIM] | [@gionosquo](https://github.com/gionosquo) | Project Manager, Fullstack Logic (JS), UI Design |
-| [Nama Anggota 2] | [ISI_NIM] | [@username] | Content Writer, HTML Structure (Instruktur & Kelas) |
+| [Dito] | [240040073] | [@arnoldborung](https://github.com/arnoldborung-rgb) | Content Writer, HTML Structure (Instruktur & Kelas) |
 | [Nama Anggota 3] | [ISI_NIM] | [@username] | CSS Styling (Layouting & Responsive), Asset Management |
 | [Nama Anggota 4] | [ISI_NIM] | [@username] | Quality Assurance, Testing, Documentation |
 
