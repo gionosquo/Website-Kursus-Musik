@@ -16,12 +16,10 @@ Proyek ini dikembangkan sebagai tugas akhir untuk mendemonstrasikan kemampuan *F
 
 | Nama Lengkap | NIM | Username GitHub | Peran / Tugas |
 | :--- | :--- | :--- | :--- |
-| **Gion** (Kamu) | [ISI_NIM] | [@gionosquo](https://github.com/gionosquo) | Project Manager, Fullstack Logic (JS), UI Design |
-| [Dito] | [240040073] | [@arnoldborung](https://github.com/arnoldborung-rgb) | Content Writer, HTML Structure (Instruktur & Kelas) |
-| [Nama Anggota 3] | [ISI_NIM] | [@username] | CSS Styling (Layouting & Responsive), Asset Management |
-| [Nama Anggota 4] | [ISI_NIM] | [@username] | Quality Assurance, Testing, Documentation |
+| [Gionosquo Marthzkiel] | [ISI_NIM] | [@gionosquo](https://github.com/gionosquo) | Project Manager, JS, UI Design (web prototype design) ,  HTML Structure (all pages), CSS Styling (all pages), Asset Managemen, |
+| [Dito] | [240040073] | [@arnoldborung](https://github.com/arnoldborung-rgb) | - |
+| [Nama Anggota 3] | [ISI_NIM] | [@username] | - |
 
-> *Catatan: Silakan sesuaikan peran di atas dengan pembagian tugas tim yang sebenarnya.*
 
 ---
 
@@ -63,57 +61,56 @@ Website ini dibangun menggunakan teknologi *native* untuk performa maksimal tanp
 
 Berikut adalah susunan direktori proyek berdasarkan kondisi repository saat ini:
 
-```text
-/ (Root Directory)
+/Web Kursus Musik
 │
-├── css/                      # Folder untuk file CSS
-│   ├── daftar-style.css      # Style halaman Pendaftaran
-│   ├── index-style.css       # Style halaman Beranda
-│   ├── instruktur-style.css  # Style halaman Instruktur
-│   ├── kelas-style.css       # Style halaman Kelas
-│   └── login-style.css       # Style halaman Login
+├── index.html               # Halaman utama website (Wajib ada)
+├── daftar.html              # Halaman pendaftaran
+├── instruktur.html          # Halaman profil tim pengajar
+├── kelas.html               # Halaman katalog kursus musik
+├── login.html               # Halaman masuk akun
+├── README.md                # Dokumentasi project di GitHub
 │
-├── js/                       # Folder untuk file JavaScript
-│   └── script.js             # File utama interaktivitas (Navigasi, Session, Animasi)
+├── /css                     # Folder untuk file CSS
+│   ├── index-style.css      # Style utama halaman Beranda
+│   ├── daftar-style.css     # Style khusus pendaftaran
+│   ├── instruktur-style.css # Style khusus profil pengajar
+│   ├── kelas-style.css      # Style khusus katalog kelas
+│   └── login-style.css      # Style khusus halaman login
 │
-├── lib/                      # Folder untuk library eksternal (jika ada)
+├── /js                      # Folder untuk file JavaScript
+│   └── script.js            # File utama interaktivitas & navigasi
 │
-├── media/                    # Folder untuk gambar dan aset media
-│   ├── audio/                # Sampel audio alat musik
-│   │   ├── drum.mp3
-│   │   ├── gitar.mp3
-│   │   ├── piano.mp3
-│   │   ├── saxophone.mp3
-│   │   └── vokal.mp3
+├── /media                   # Folder untuk gambar dan aset media
+│   ├── /audio               # Sampel suara alat musik
+│   │   ├── drum.mp3         # Audio sampel drum
+│   │   ├── gitar.mp3        # Audio sampel gitar
+│   │   ├── piano.mp3        # Audio sampel piano
+│   │   ├── saxophone.mp3    # Audio sampel saxophone
+│   │   └── vokal.mp3        # Audio sampel vokal
 │   │
-│   ├── kelas/                # Aset gambar untuk halaman Kelas & Instruktur
-│   │   ├── gambar-drum.jpg
-│   │   ├── gambar-gitar.png.jpg
-│   │   ├── gambar-piano.jpg
-│   │   ├── gambar-saxophone.jpg
-│   │   ├── gambar-vocal.jpg
-│   │   ├── mr-abraham.png
-│   │   ├── mr-jacob.png
-│   │   ├── mr-randy.png
-│   │   ├── mr-sam.png
-│   │   ├── mr-varajh.png
-│   │   ├── ms-claren.png
-│   │   ├── ms-lauren.png
-│   │   ├── ms-rose.png
-│   │   └── ms-samantha.png
+│   ├── /kelas               # Aset gambar instruktur & materi
+│   │   ├── gambar-drum.jpg      # Foto profil kelas drum
+│   │   ├── gambar-gitar.png.jpg # Foto profil kelas gitar
+│   │   ├── gambar-piano.jpg     # Foto profil kelas piano
+│   │   ├── gambar-saxophone.jpg # Foto profil kelas saxophone
+│   │   ├── gambar-vocal.jpg     # Foto profil kelas vokal
+│   │   ├── mr-abraham.png       # Foto instruktur Abraham
+│   │   ├── mr-jacob.png         # Foto instruktur Jacob
+│   │   ├── mr-randy.png         # Foto instruktur Randy
+│   │   ├── mr-sam.png           # Foto instruktur Sam
+│   │   ├── mr-varajh.png        # Foto instruktur Varajh
+│   │   ├── ms-claren.png        # Foto instruktur Claren
+│   │   ├── ms-lauren.png        # Foto instruktur Lauren
+│   │   ├── ms-rose.png          # Foto instruktur Rose
+│   │   └── ms-samantha.png      # Foto instruktur Samantha
 │   │
-│   ├── About_us.png          # Gambar ilustrasi About
-│   ├── Logo-Atas-Bawah.png   # Logo untuk Footer
-│   ├── Logo-Samping.png      # Logo untuk Header
-│   └── Sollasi-Logo-White.png# Logo putih untuk Hero Banner
+│   ├── About_us.png         # Ilustrasi bagian Tentang Kami
+│   ├── Logo-Atas-Bawah.png  # Logo untuk area footer
+│   ├── Logo-Samping.png     # Logo untuk area header
+│   └── Sollasi-Logo-White.png # Logo putih untuk hero banner
 │
-├── daftar.html               # Halaman Pendaftaran
-├── index.html                # Halaman Utama (Wajib ada)
-├── instruktur.html           # Halaman Profil Instruktur
-├── kelas.html                # Halaman Daftar Kelas
-├── login.html                # Halaman Login
-└── README.md                 # Dokumentasi Project di GitHub
-
+└── /lib                   # Folder untuk library eksternal
+    └── (Kosong)
 ---
 ## 7. Cara Menjalankan Website
 A. Akses Langsung (Online)
